@@ -23,6 +23,11 @@ public class Resource : MonoBehaviour
         OnValueChanged.Invoke();
     }
 
+    public bool HasEnough(int value)
+    {
+        return quantity >= value;
+    }
+
     public void RemoveAmount(int value) {
         quantity -= value;
 

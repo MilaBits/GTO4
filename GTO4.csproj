@@ -344,12 +344,12 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
-    <Compile Include="Assets\Scripts\ExistingResources.cs" />
-    <Compile Include="Assets\Scripts\ExistingUnits.cs" />
-    <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\GridTile.cs" />
     <Compile Include="Assets\Scripts\Resource.cs" />
-    <Compile Include="Assets\Scripts\UIController.cs" />
+    <Compile Include="Assets\Scripts\ResourceUI.cs" />
+    <Compile Include="Assets\Scripts\TileGrid.cs" />
     <Compile Include="Assets\Scripts\Unit.cs" />
+    <Compile Include="Assets\Scripts\UnitFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
