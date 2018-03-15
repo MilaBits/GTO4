@@ -20,7 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4816416047632670}
   - component: {fileID: 114684477020952412}
-  m_Layer: 0
+  - component: {fileID: 65897009934506062}
+  m_Layer: 9
   m_Name: Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,8 +39,7 @@ GameObject:
   - component: {fileID: 33997098866420916}
   - component: {fileID: 23929829730828410}
   - component: {fileID: 95289901746519640}
-  - component: {fileID: 65901257852846588}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GridTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1587461907545880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.07108879, y: -4.155586, z: 7.1847305}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4118989531000660}
@@ -115,17 +115,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1834357272810542}
   m_Mesh: {fileID: 4300000, guid: 6208dea485414754cb0a10af0eb419ef, type: 3}
---- !u!65 &65901257852846588
+--- !u!65 &65897009934506062
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1834357272810542}
+  m_GameObject: {fileID: 1587461907545880}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2.0000005, z: 0}
+  m_Size: {x: 2, y: 0, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95289901746519640
 Animator:
@@ -158,3 +158,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x: 0
   y: 0
+  selectedMaterial: {fileID: 2100000, guid: 351b8815e25bbaa4ba2fa047fdde6e85, type: 2}

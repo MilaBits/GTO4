@@ -7,6 +7,7 @@ public class UnitFactory : MonoBehaviour {
 
     public Unit Unit;
     public TileGrid Grid;
+    public Player Owner;
 
     public int spawnX;
     public int spawnY;
@@ -29,7 +30,8 @@ public class UnitFactory : MonoBehaviour {
         }
 
         // Spawn unit
-        Instantiate(Unit, Grid.GetTile(spawnX, spawnY).transform);
+        Unit unit = Instantiate(Unit, Grid.GetTile(spawnX, spawnY).transform);
+        unit.owner = Owner;
     }
 
     //Attempt at placing a unit where the player clicks
