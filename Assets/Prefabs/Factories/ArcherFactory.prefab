@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4519735790167146}
   - component: {fileID: 114649781797713724}
+  - component: {fileID: 114250672760707576}
+  - component: {fileID: 114610451566951920}
   m_Layer: 0
   m_Name: ArcherFactory
   m_TagString: Untagged
@@ -40,6 +42,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114250672760707576
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1918686556678398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1918686556678398}
+  _assetGuid: ad21a82c1772e25498e7dcf777ddf7f5
+--- !u!114 &114610451566951920
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1918686556678398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: ac20e667-713d-42b0-a7bb-a444968bf6c2
 --- !u!114 &114649781797713724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,6 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Unit: {fileID: 114193581698548024, guid: cc644d82bc733c1408bee964f66ad378, type: 2}
   Grid: {fileID: 0}
+  Owner: {fileID: 0}
   spawnX: 2
   spawnY: 3
   costs:

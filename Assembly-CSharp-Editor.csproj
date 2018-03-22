@@ -344,6 +344,12 @@
  <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
  <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
  </Reference>
+ <Reference Include="NestedPrefabs">
+ <HintPath>D:/Data/Projects/Unity/GTO4/Assets/Plugins/Visual Design Cafe/Nested Prefabs/NestedPrefabs.dll</HintPath>
+ </Reference>
+ <Reference Include="NestedPrefabs.Editor">
+ <HintPath>D:/Data/Projects/Unity/GTO4/Assets/Plugins/Visual Design Cafe/Nested Prefabs/NestedPrefabs.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="mscorlib">
  <HintPath>D:/Software/Unity/2018.1.0b9/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/mscorlib.dll</HintPath>
  </Reference>
@@ -375,6 +381,8 @@
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{6FF7EEE9-88F8-B56B-63F8-63BC88C6E262}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
+      <Project>{92734610-12C1-2BCD-93D4-B3C6C9630B6B}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

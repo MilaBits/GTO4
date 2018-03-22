@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33720382143090244}
   - component: {fileID: 23160921523901292}
   - component: {fileID: 95832828502868760}
+  - component: {fileID: 114570249959979468}
   m_Layer: 0
   m_Name: PoliceHovercar
   m_TagString: Untagged
@@ -38,6 +39,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4338813710593298}
   - component: {fileID: 114487521850122056}
+  - component: {fileID: 114143158317647280}
+  - component: {fileID: 114678227113700460}
   m_Layer: 0
   m_Name: PoliceCar
   m_TagString: Untagged
@@ -113,7 +116,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1550392917047860}
-  m_Mesh: {fileID: 4300000, guid: 32164d6b31b886d42a43cb6386ea2e05, type: 3}
+  m_Mesh: {fileID: 4300002, guid: 32164d6b31b886d42a43cb6386ea2e05, type: 3}
 --- !u!95 &95832828502868760
 Animator:
   serializedVersion: 3
@@ -123,7 +126,7 @@ Animator:
   m_GameObject: {fileID: 1550392917047860}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 32164d6b31b886d42a43cb6386ea2e05, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 53c03fb1427ba834f8c79dff0ea759cc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -132,6 +135,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114143158317647280
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1585619482417430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1585619482417430}
+    - {fileID: 1550392917047860}
+  _assetGuid: f5eb23b837a7cb448bbd1c88320c7703
 --- !u!114 &114487521850122056
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,3 +165,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
   movementSpeed: 0.5
+--- !u!114 &114570249959979468
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1550392917047860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: db2f21a8-7cc5-4855-ae78-da069874560b
+--- !u!114 &114678227113700460
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1585619482417430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 16909644-5fef-4600-9cbd-16740eaf5cd9

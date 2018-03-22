@@ -294,6 +294,12 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>D:/Software/Unity/2018.1.0b9/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="NestedPrefabs">
+      <HintPath>Assets/Plugins/Visual Design Cafe/Nested Prefabs/NestedPrefabs.dll</HintPath>
+    </Reference>
+    <Reference Include="NestedPrefabs.Editor">
+      <HintPath>Assets/Plugins/Visual Design Cafe/Nested Prefabs/NestedPrefabs.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
@@ -351,6 +357,10 @@
       <Project>{4848D299-940D-F847-A705-FBF3AD673124}</Project>
       <Name>GTO4</Name>
     </ProjectReference>
+    <ProjectReference Include="GTO4.Editor.Plugins.csproj">
+      <Project>{40B8E3B7-1EEC-A449-64D9-02C15FD0EFA8}</Project>
+      <Name>GTO4.Editor.Plugins</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.PackageManagerUI.Editor.csproj">
       <Project>{6877705C-FBD9-0C4F-5AFB-6FB431E5D39D}</Project>
       <Name>Unity.PackageManagerUI.Editor</Name>
@@ -393,6 +403,9 @@
     <Compile Include="Assets\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Plugins\Visual Design Cafe\Nested Prefabs\NestedPrefabs.Editor.xml" />
+    <None Include="Assets\Plugins\Visual Design Cafe\Nested Prefabs\NestedPrefabs.xml" />
+    <None Include="Assets\Plugins\Visual Design Cafe\Nested Prefabs\README.txt" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />

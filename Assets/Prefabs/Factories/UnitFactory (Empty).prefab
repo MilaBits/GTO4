@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4740688132867316}
   - component: {fileID: 114239685412962342}
+  - component: {fileID: 114068711492289620}
+  - component: {fileID: 114091943029915106}
   m_Layer: 0
   m_Name: UnitFactory (Empty)
   m_TagString: Untagged
@@ -40,6 +42,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114068711492289620
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1110958939465034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1110958939465034}
+  _assetGuid: d7781690af6aa21459e79ee0938feb74
+--- !u!114 &114091943029915106
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1110958939465034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: ea9c533d-8ebe-4c6c-b3f8-52b0644d527f
 --- !u!114 &114239685412962342
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,6 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Unit: {fileID: 0}
   Grid: {fileID: 0}
+  Owner: {fileID: 0}
   spawnX: 0
   spawnY: 0
   costs:

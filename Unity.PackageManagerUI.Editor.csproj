@@ -285,6 +285,12 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>D:/Software/Unity/2018.1.0b9/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="NestedPrefabs">
+      <HintPath>Assets/Plugins/Visual Design Cafe/Nested Prefabs/NestedPrefabs.dll</HintPath>
+    </Reference>
+    <Reference Include="NestedPrefabs.Editor">
+      <HintPath>Assets/Plugins/Visual Design Cafe/Nested Prefabs/NestedPrefabs.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
@@ -377,6 +383,9 @@
     <Compile Include="C:\ProgramData\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.7.2\Editor\Sources\UI\PackageSearchFilterTabs.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Plugins\Visual Design Cafe\Nested Prefabs\NestedPrefabs.Editor.xml" />
+    <None Include="Assets\Plugins\Visual Design Cafe\Nested Prefabs\NestedPrefabs.xml" />
+    <None Include="Assets\Plugins\Visual Design Cafe\Nested Prefabs\README.txt" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />

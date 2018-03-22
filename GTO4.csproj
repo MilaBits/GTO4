@@ -252,6 +252,12 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>D:/Software/Unity/2018.1.0b9/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="NestedPrefabs">
+      <HintPath>Assets/Plugins/Visual Design Cafe/Nested Prefabs/NestedPrefabs.dll</HintPath>
+    </Reference>
+    <Reference Include="NestedPrefabs.Editor">
+      <HintPath>Assets/Plugins/Visual Design Cafe/Nested Prefabs/NestedPrefabs.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
@@ -350,12 +356,16 @@
     <Compile Include="Assets\Scripts\Resource.cs" />
     <Compile Include="Assets\Scripts\ResourceUI.cs" />
     <Compile Include="Assets\Scripts\Selection.cs" />
+    <Compile Include="Assets\Scripts\StreetGenerator.cs" />
     <Compile Include="Assets\Scripts\TileGrid.cs" />
     <Compile Include="Assets\Scripts\TurnManager.cs" />
     <Compile Include="Assets\Scripts\Unit.cs" />
     <Compile Include="Assets\Scripts\UnitFactory.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Plugins\Visual Design Cafe\Nested Prefabs\NestedPrefabs.Editor.xml" />
+    <None Include="Assets\Plugins\Visual Design Cafe\Nested Prefabs\NestedPrefabs.xml" />
+    <None Include="Assets\Plugins\Visual Design Cafe\Nested Prefabs\README.txt" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />

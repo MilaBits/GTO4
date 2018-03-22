@@ -49,7 +49,8 @@ public class Selection : MonoBehaviour {
 
         selected = hit.transform.gameObject.GetComponent<GridTile>();
 
-        previousSelected.MarkSelected(false);
+        if (previousSelected != null)
+            previousSelected.MarkSelected(false);
         selected.MarkSelected(true);
     }
 }

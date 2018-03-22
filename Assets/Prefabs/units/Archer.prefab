@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33436870095740528}
   - component: {fileID: 23585619888787046}
   - component: {fileID: 136715781287628560}
+  - component: {fileID: 114246330904004194}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -38,6 +39,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4154354838189296}
   - component: {fileID: 114193581698548024}
+  - component: {fileID: 114934136276207926}
+  - component: {fileID: 114975537733164912}
   m_Layer: 0
   m_Name: Archer
   m_TagString: Untagged
@@ -127,6 +130,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
   movementSpeed: 1
+--- !u!114 &114246330904004194
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1544289253287626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 67a0e1ec-f99d-4752-a57b-7755f0e4e6e3
+--- !u!114 &114934136276207926
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1685898408009974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -605777808, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 
+  _referenceCollection:
+    _collection:
+    - {fileID: 1685898408009974}
+    - {fileID: 1544289253287626}
+  _assetGuid: cc644d82bc733c1408bee964f66ad378
+--- !u!114 &114975537733164912
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1685898408009974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 112998890, guid: 325c5b2a7434372429c2ca9d61dba58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _guid: 14c2fd9e-c295-4811-be30-0f96ba0caf7f
 --- !u!136 &136715781287628560
 CapsuleCollider:
   m_ObjectHideFlags: 1
