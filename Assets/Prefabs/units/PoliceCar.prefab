@@ -90,7 +90,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 32164d6b31b886d42a43cb6386ea2e05, type: 3}
+  - {fileID: 2100000, guid: b78bdfa94dd7a864c86de12ecad1be93, type: 2}
+  - {fileID: 2100000, guid: caf6a3308fba89546bac41fe1768dba3, type: 2}
+  - {fileID: 2100000, guid: 56a2ecb6ba3d35f488e95135ba756fdb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -137,7 +139,7 @@ Animator:
   m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114143158317647280
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1585619482417430}
@@ -167,7 +169,7 @@ MonoBehaviour:
   movementSpeed: 0.5
 --- !u!114 &114570249959979468
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1550392917047860}
@@ -179,7 +181,7 @@ MonoBehaviour:
   _guid: db2f21a8-7cc5-4855-ae78-da069874560b
 --- !u!114 &114678227113700460
 MonoBehaviour:
-  m_ObjectHideFlags: 11
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1585619482417430}

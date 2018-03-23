@@ -7,8 +7,6 @@ public class GridTile : MonoBehaviour {
     public int x;
     public int y;
 
-
-    public Material selectedMaterial;
     private MeshRenderer renderer;
     private Material originalMaterial;
 
@@ -17,13 +15,8 @@ public class GridTile : MonoBehaviour {
         renderer = GetComponentInChildren<MeshRenderer>();
         originalMaterial = renderer.material;
     }
-
-    // Update is called once per frame
-    void Update() {
-
-    }
-
-    public void MarkSelected(bool selected) {
+    
+    public void MarkSelected(bool selected, Material selectedMaterial) {
         if (selected) {
             renderer.material = selectedMaterial;
         }

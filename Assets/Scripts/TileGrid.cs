@@ -10,8 +10,6 @@ public class TileGrid : MonoBehaviour {
     
     public GameObject tile;
 
-    public GameObject selectedTile;
-
     // Use this for initialization
     void Start() {
         for (int x = 0; x < gridWidth; x++) {
@@ -28,7 +26,7 @@ public class TileGrid : MonoBehaviour {
 
     public GridTile GetTile(int x, int y)
     {
-        return transform.GetChild(x * gridWidth + y).GetComponent<GridTile>();
+        return transform.GetChild(x * gridHeight + y).GetComponent<GridTile>();
     }
 
     // Update is called once per frame

@@ -341,6 +341,12 @@
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>D:/Software/Unity/2018.1.0b9/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
+ <Reference Include="NestedPrefabs">
+ <HintPath>D:/Data/Projects/Unity/GTO4/Assets/Plugins/Visual Design Cafe/Nested Prefabs/NestedPrefabs.dll</HintPath>
+ </Reference>
+ <Reference Include="NestedPrefabs.Editor">
+ <HintPath>D:/Data/Projects/Unity/GTO4/Assets/Plugins/Visual Design Cafe/Nested Prefabs/NestedPrefabs.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
@@ -352,12 +358,6 @@
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="NestedPrefabs">
- <HintPath>D:/Data/Projects/Unity/GTO4/Assets/Plugins/Visual Design Cafe/Nested Prefabs/NestedPrefabs.dll</HintPath>
- </Reference>
- <Reference Include="NestedPrefabs.Editor">
- <HintPath>D:/Data/Projects/Unity/GTO4/Assets/Plugins/Visual Design Cafe/Nested Prefabs/NestedPrefabs.Editor.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>D:/Software/Unity/2018.1.0b9/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>

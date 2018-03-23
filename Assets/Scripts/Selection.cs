@@ -6,6 +6,12 @@ public class Selection : MonoBehaviour {
 
     public GridTile previousSelected;
     public GridTile selected;
+    public Player player;
+
+
+    void Awake() {
+        player = GetComponentInParent<Player>();
+    }
 
     // Update is called once per frame
     void Update() {
@@ -50,7 +56,15 @@ public class Selection : MonoBehaviour {
         selected = hit.transform.gameObject.GetComponent<GridTile>();
 
         if (previousSelected != null)
-            previousSelected.MarkSelected(false);
-        selected.MarkSelected(true);
+            previousSelected.MarkSelected(false, player.playerSelection);
+        selected.MarkSelected(true, player.playerSelection);
+    }
+
+    private void OnEnable() {
+        selected.MarkSelected(true, player.playerSelection);
+    }
+
+    private void OnDisable() {
+        selected.MarkSelected(false, player.playerSelection);
     }
 }

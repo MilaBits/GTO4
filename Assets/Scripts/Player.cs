@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 {
 
     public Text nameLabel;
+    public Material playerMaterial;
+    public Material playerSelection;
 
     void Awake()
     {

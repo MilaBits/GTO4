@@ -29,38 +29,26 @@ public class UnitFactory : MonoBehaviour {
             resourceCost.Pay();
         }
 
+        // Get player's selection
+        if (Owner.GetComponent<Selection>() != null) {
+            Selection selection = Owner.GetComponent<Selection>();
+            spawnX = selection.selected.x;
+            spawnY = selection.selected.y;
+            Debug.Log("Spawning at: " + spawnX + "," + spawnY);
+        }
+
         // Spawn unit
         Unit unit = Instantiate(Unit, Grid.GetTile(spawnX, spawnY).transform);
         unit.owner = Owner;
+
+
+        // Car specific code to change it's color
+        Renderer unitRenderer = unit.GetComponentInChildren<MeshRenderer>();
+        Material[] materials = unitRenderer.materials;
+        materials[1] = Owner.playerMaterial;
+        unitRenderer.materials = materials;
+
     }
-
-    //Attempt at placing a unit where the player clicks
-    //IEnumerator WaitForKeyDown(KeyCode keyCode) {
-    //    while (!Input.GetKeyDown("Fire2"))
-    //        Debug.Log("No click");
-    //    yield return null;
-    //}
-
-    //public void SpawnUnitOnSelectedTile() {
-    //    WaitForInput();
-
-    //    //get mouse position in world
-    //    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-    //    RaycastHit hit;
-    //    // Casts the ray and get the first game object hit
-    //    Physics.Raycast(ray, out hit);
-
-    //    if (hit.transform.GetComponent<GridTile>() != null) {
-    //        GridTile tile = hit.transform.GetComponent<GridTile>();
-    //        spawnX = tile.x;
-    //        spawnY = tile.y;
-    //        SpawnUnit();
-    //    }
-    //}
-
-    //public IEnumerable WaitForInput() {
-    //    yield return StartCoroutine(WaitForKeyDown(KeyCode.Mouse0));
-    //}
 
     [Serializable]
     public class ResourceCost {
