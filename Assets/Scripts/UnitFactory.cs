@@ -43,10 +43,10 @@ public class UnitFactory : MonoBehaviour {
 
 
         // Car specific code to change it's color
-        Renderer unitRenderer = unit.GetComponentInChildren<MeshRenderer>();
-        Material[] materials = unitRenderer.materials;
-        materials[1] = Owner.playerMaterial;
-        unitRenderer.materials = materials;
+        //Renderer unitRenderer = unit.GetComponentInChildren<MeshRenderer>();
+        //Material[] materials = unitRenderer.materials;
+        //materials[1] = Owner.playerMaterial;
+        //unitRenderer.materials = materials;
 
     }
 

@@ -16,7 +16,6 @@ public class Selection : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-
         if (Input.GetButtonDown("Fire1")) {
             GetClickedObject();
         }
@@ -29,7 +28,17 @@ public class Selection : MonoBehaviour {
 
                 // Check if it's the owner's turn
                 if (unit.owner.gameObject.activeSelf) {
-                    unit.Move(selected.transform);
+
+                    if (selected.gameObject.GetComponent<GridTile>() && selected.GetComponentInChildren<Unit>()) {
+
+                        // Clicked an enemy, attack
+                        unit.turret.Fire(selected.GetComponentInChildren<Unit>());
+                    }
+                    else {
+
+                        // Clicked an empty tile, move
+                        unit.Move(selected.transform);
+                    }
                 }
 
             }
@@ -61,10 +70,12 @@ public class Selection : MonoBehaviour {
     }
 
     private void OnEnable() {
-        selected.MarkSelected(true, player.playerSelection);
+        if (selected != null && player.playerSelection != null)
+            selected.MarkSelected(true, player.playerSelection);
     }
 
     private void OnDisable() {
-        selected.MarkSelected(false, player.playerSelection);
+        if (selected != null && player.playerSelection != null)
+            selected.MarkSelected(false, player.playerSelection);
     }
 }
