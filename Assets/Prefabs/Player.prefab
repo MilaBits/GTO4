@@ -583,6 +583,9 @@ MonoBehaviour:
   previousSelected: {fileID: 0}
   selected: {fileID: 0}
   player: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &114133342834348440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -607,8 +610,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameLabel: {fileID: 114414765273428678}
-  playerMaterial: {fileID: 2100000, guid: 6ea9e85a0ecb5a447bb1caccaaf47ccf, type: 2}
-  playerSelection: {fileID: 2100000, guid: 351b8815e25bbaa4ba2fa047fdde6e85, type: 2}
+  playerMaterial: {fileID: 2100000, guid: 1f1fe19a966c1d043b6254c72391a956, type: 2}
+  playerSelection: {fileID: 2100000, guid: 51cfee619baa5c441844caaf4f14231c, type: 2}
 --- !u!114 &114198972419917736
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -7,7 +7,7 @@ public class Selection : MonoBehaviour {
     public GridTile previousSelected;
     public GridTile selected;
     public Player player;
-
+    public LayerMask layerMask;
 
     void Awake() {
         player = GetComponentInParent<Player>();
@@ -16,10 +16,12 @@ public class Selection : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
+        //LMB
         if (Input.GetButtonDown("Fire1")) {
             GetClickedObject();
         }
 
+        //RMB
         if (Input.GetButtonDown("Fire2")) {
             GetClickedObject();
 
@@ -40,9 +42,7 @@ public class Selection : MonoBehaviour {
                         unit.Move(selected.transform);
                     }
                 }
-
             }
-
         }
     }
 
@@ -52,7 +52,7 @@ public class Selection : MonoBehaviour {
         RaycastHit hit;
         // Casts the ray and get the first game object hit
         int maxDistance = 25;
-        Physics.Raycast(ray, out hit, maxDistance);
+        Physics.Raycast(ray, out hit, maxDistance, layerMask);
 
         if (hit.transform == null) {
             return;

@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 23160921523901292}
   - component: {fileID: 95832828502868760}
   - component: {fileID: 114570249959979468}
+  - component: {fileID: 64922851645705204}
   m_Layer: 0
   m_Name: PoliceHovercar
   m_TagString: Untagged
@@ -275,6 +276,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1550392917047860}
   m_Mesh: {fileID: 4300002, guid: 32164d6b31b886d42a43cb6386ea2e05, type: 3}
+--- !u!64 &64922851645705204
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1550392917047860}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300002, guid: 32164d6b31b886d42a43cb6386ea2e05, type: 3}
 --- !u!95 &95832828502868760
 Animator:
   serializedVersion: 3
@@ -453,4 +468,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turret: {fileID: 1004200707182710}
-  Damage: 15
+  projectile: {fileID: 114539535911716908, guid: b772762635578ee4c96b284dc47c5497,
+    type: 2}
+  Damage: 50
