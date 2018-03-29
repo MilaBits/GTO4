@@ -470,4 +470,5 @@ MonoBehaviour:
   turret: {fileID: 1004200707182710}
   projectile: {fileID: 114539535911716908, guid: b772762635578ee4c96b284dc47c5497,
     type: 2}
-  Damage: 50
+  projectileSpeed: 1
+  Damage: 35

@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour {
+public class Projectile : Ownable {
     public float Damage;
-    public Player Owner;
     public ParticleSystem particleSystem;
 
     void Awake() {
@@ -17,7 +16,7 @@ public class Projectile : MonoBehaviour {
         Debug.Log(col.gameObject.name);
         if (col.gameObject.transform.parent.GetComponent<Unit>() != null) {
             Unit hit = col.gameObject.transform.parent.GetComponent<Unit>();
-            if (hit.owner == Owner) {
+            if (owner == null || hit.owner == owner) {
                 return;
             }
 

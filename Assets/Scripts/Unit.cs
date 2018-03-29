@@ -15,6 +15,7 @@ public class Unit : Ownable {
     private Transform target;
 
     private ParticleSystem particleSystem;
+    private Animator animator;
 
     [HideInInspector]
     public Turret turret;
@@ -24,6 +25,7 @@ public class Unit : Ownable {
             turret = GetComponent<Turret>();
 
         particleSystem = GameObject.Find("GameManager").GetComponent<ParticleSystem>();
+        animator = GetComponentInChildren<Animator>();
 
         FixTeamColors();
     }
@@ -43,7 +45,8 @@ public class Unit : Ownable {
         emitParams.startSize = 15;
         particleSystem.Emit(emitParams, 50);
         //TODO: Maybe a fade out effect
-        Destroy(gameObject, 2f);
+        animator.SetTrigger("Crash");
+        Destroy(gameObject, 5f);
     }
 
     public void Move(Transform target) {

@@ -206,7 +206,7 @@ TrailRenderer:
   m_Autodestruct: 0
 --- !u!114 &114179397293810614
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1371990011099136}
@@ -227,12 +227,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a52c7fa11fded8948bc60b13f838b800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
   Damage: 50
-  Owner: {fileID: 0}
   particleSystem: {fileID: 0}
 --- !u!114 &114775806580607126
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1371990011099136}

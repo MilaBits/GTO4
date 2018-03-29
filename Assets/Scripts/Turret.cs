@@ -6,6 +6,7 @@ using UnityEngine;
 public class Turret : MonoBehaviour {
     public GameObject turret;
     public Projectile projectile;
+    public float projectileSpeed;
     public float Damage;
 
     private Unit unit;
@@ -27,8 +28,7 @@ public class Turret : MonoBehaviour {
             turret.transform.Rotate(-90, 0, 0);
 
             Debug.Log("Bang bang bang!");
-            StartCoroutine(SendProjectile(turret.transform.position, target.transform, 1f));
-            Debug.Log("coroutine ended");
+            StartCoroutine(SendProjectile(turret.transform.position, target.transform, projectileSpeed));
             turnManager.NextTurn();
         }
         else {
@@ -38,8 +38,8 @@ public class Turret : MonoBehaviour {
 
     IEnumerator SendProjectile(Vector3 startPosition, Transform target, float time) {
         Projectile shot = Instantiate(projectile);
-        projectile.Damage = Damage;
-        projectile.Owner = unit.owner;
+        shot.owner = unit.owner;
+        shot.Damage = Damage;
         shot.transform.position = turret.transform.position;
 
         float startTime = Time.time;

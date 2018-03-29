@@ -546,7 +546,7 @@ MonoBehaviour:
   m_Text: 0
 --- !u!114 &114058813966629308
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1081481527263860}
@@ -588,7 +588,7 @@ MonoBehaviour:
     m_Bits: 512
 --- !u!114 &114133342834348440
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1999704287329348}
@@ -654,7 +654,7 @@ MonoBehaviour:
   m_FillOrigin: 0
 --- !u!114 &114255551422558506
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1370130436860346}
@@ -666,7 +666,7 @@ MonoBehaviour:
   _guid: 2f0257c3-d636-4798-91d6-5e8de70337f4
 --- !u!114 &114282128776218916
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1779791024819992}
@@ -678,7 +678,7 @@ MonoBehaviour:
   _guid: 5c3b400d-cc9d-4193-9bd5-17967bfdf564
 --- !u!114 &114288048759512732
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1709518487870108}
@@ -690,7 +690,7 @@ MonoBehaviour:
   _guid: e31ce5e8-738e-42df-9479-5b84d3ba8e90
 --- !u!114 &114292687085188486
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1468222145687212}
@@ -820,7 +820,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114365884522896720
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1242412894061216}
@@ -865,7 +865,7 @@ MonoBehaviour:
   m_Text: resource
 --- !u!114 &114374190509367710
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1802152868512788}
@@ -877,7 +877,7 @@ MonoBehaviour:
   _guid: 3ca4eeb7-1d39-47c4-99f8-26d740a302a5
 --- !u!114 &114375894682411526
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1131298975642596}
@@ -922,7 +922,7 @@ MonoBehaviour:
   m_Text: player name
 --- !u!114 &114436859538502558
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1802152868512788}
@@ -958,7 +958,7 @@ MonoBehaviour:
   _assetGuid: 9d55749df69a76649b33eca85e6a3475
 --- !u!114 &114460845542455910
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1632496091864190}
@@ -1037,7 +1037,7 @@ MonoBehaviour:
     m_Bits: 4294967295
 --- !u!114 &114551983857120478
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1700178794538448}
@@ -1076,7 +1076,7 @@ MonoBehaviour:
   m_FillOrigin: 0
 --- !u!114 &114564278646063134
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1872221383697998}
@@ -1178,7 +1178,7 @@ MonoBehaviour:
   m_FillOrigin: 0
 --- !u!114 &114585800415150766
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1382348700983600}
@@ -1217,7 +1217,7 @@ MonoBehaviour:
   m_FillOrigin: 0
 --- !u!114 &114666139607209508
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1689938879453396}
@@ -1229,7 +1229,7 @@ MonoBehaviour:
   _guid: 00e7bce9-c202-4f25-a38b-ce1f14334ca7
 --- !u!114 &114688482511784150
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1603139174946582}
@@ -1241,7 +1241,7 @@ MonoBehaviour:
   _guid: a2a617fa-856b-4d33-8f2a-143c19e4cd04
 --- !u!114 &114715608959970062
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1803995644718578}
@@ -1301,7 +1301,7 @@ MonoBehaviour:
     cost: 100
 --- !u!114 &114793254236396798
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1149989292372460}
@@ -1313,7 +1313,7 @@ MonoBehaviour:
   _guid: 2ce4f9bd-3097-477d-b1f3-f646292be8d1
 --- !u!114 &114798364845274906
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1015849970735692}
@@ -1358,7 +1358,7 @@ MonoBehaviour:
   m_Text: resource
 --- !u!114 &114884157218362120
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1024865730954386}
@@ -1397,7 +1397,7 @@ MonoBehaviour:
   m_FillOrigin: 0
 --- !u!114 &114937451321322006
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1158068162298374}
@@ -1436,7 +1436,7 @@ MonoBehaviour:
   m_FillOrigin: 0
 --- !u!114 &114985707472927452
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1772708789429500}
