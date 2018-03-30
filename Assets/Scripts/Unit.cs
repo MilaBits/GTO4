@@ -46,7 +46,7 @@ public class Unit : Ownable {
         particleSystem.Emit(emitParams, 50);
         //TODO: Maybe a fade out effect
         animator.SetTrigger("Crash");
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 10f);
     }
 
     public void Move(Transform target) {
@@ -56,11 +56,13 @@ public class Unit : Ownable {
 
     IEnumerator MoveToPosition(Vector3 startPosition, Vector3 targetPosition, float time) {
         float startTime = Time.time;
+        animator.SetBool("moving", true);
         while (Time.time < startTime + time) {
             transform.position = Vector3.Lerp(startPosition, targetPosition, (Time.time - startTime) / time);
             yield return null;
         }
         transform.position = targetPosition;
+        animator.SetBool("moving", false);
     }
 
     private void FixTeamColors() {
