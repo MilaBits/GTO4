@@ -19,9 +19,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4100465968071984}
-  - component: {fileID: 114725720530126264}
   - component: {fileID: 114375596370384268}
   - component: {fileID: 114349417363262692}
+  - component: {fileID: 114983467600486148}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -70,7 +70,7 @@ MonoBehaviour:
     _collection:
     - {fileID: 1916361126646182}
   _assetGuid: 4e36ab1f95b3f3b41b1b4247c07ebee7
---- !u!114 &114725720530126264
+--- !u!114 &114983467600486148
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -78,14 +78,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1916361126646182}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c190bf3a283b324b9e8240811403dcd, type: 3}
+  m_Script: {fileID: 11500000, guid: b8d1d5a29a47d2644b3d1ad4b20274fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ScrollSpeed: 5
-  distance: 0
-  AvailabeStreetParts:
-  - {fileID: 1849971669077908, guid: 5bea84a16b9d24d4ea80a8916c4a84a1, type: 2}
-  - {fileID: 1842265874410624, guid: cd3d130b828f732499265fb751b06400, type: 2}
+  AvailabeStreetParts: []
   PartSize: 100
   MaxCurrentParts: 3
   GeneratedParts: 0

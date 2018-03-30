@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class TileGrid : MonoBehaviour {
 
-    public int gridWidth;
-    public int gridHeight;
-    public float spacing;
+    public int GridWidth;
+    public int GridHeight;
+    public float Spacing;
     
-    public GameObject tile;
+    public GridTile Tile;
 
     // Use this for initialization
     void Start() {
-        for (int x = 0; x < gridWidth; x++) {
-            for (int y = 0; y < gridHeight; y++) {
-                GridTile currentTile = Instantiate(tile, new Vector3(x * spacing, 0, y * spacing), Quaternion.identity).GetComponent<GridTile>();
+        for (int x = 0; x < GridWidth; x++) {
+            for (int y = 0; y < GridHeight; y++) {
+                GridTile currentTile = Instantiate(Tile, new Vector3(x * Spacing, 0, y * Spacing), Quaternion.identity).GetComponent<GridTile>();
                 currentTile.transform.SetParent(gameObject.transform);
                 currentTile.x = x;
                 currentTile.y = y;
@@ -26,7 +26,7 @@ public class TileGrid : MonoBehaviour {
 
     public GridTile GetTile(int x, int y)
     {
-        return transform.GetChild(x * gridHeight + y).GetComponent<GridTile>();
+        return transform.GetChild(x * GridHeight + y).GetComponent<GridTile>();
     }
 
     // Update is called once per frame

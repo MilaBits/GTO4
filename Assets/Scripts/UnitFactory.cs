@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class UnitFactory : MonoBehaviour {
 
@@ -14,6 +15,12 @@ public class UnitFactory : MonoBehaviour {
 
     public List<ResourceCost> costs = new List<ResourceCost>();
 
+    public void SpawnUnit(GridTile tile) {
+        spawnX = tile.x;
+        spawnY = tile.y;
+        SpawnUnit();
+    }
+    
     public void SpawnUnit() {
 
         // Check if there are enough resources
