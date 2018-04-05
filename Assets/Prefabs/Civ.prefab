@@ -23,6 +23,9 @@ GameObject:
   - component: {fileID: 114197668769759766}
   - component: {fileID: 114299254861953624}
   - component: {fileID: 114548509528224262}
+  - component: {fileID: 114709364369578894}
+  - component: {fileID: 114982349589747906}
+  - component: {fileID: 114427916631865980}
   m_Layer: 0
   m_Name: Civ
   m_TagString: Untagged
@@ -60,6 +63,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 512
+  eventLog: {fileID: 0}
 --- !u!114 &114299254861953624
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -75,12 +79,25 @@ MonoBehaviour:
   _referenceCollection:
     _collection:
     - {fileID: 1441610070458484}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
   _assetGuid: 4026c9ca458e45b4698051c21d475ff9
+--- !u!114 &114427916631865980
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1441610070458484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f214b7d094ca249bf376c01e4a8aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Unit: {fileID: 114936143881869104, guid: 9b58733c7ddb6eb44baa95ccd33e1262, type: 2}
+  Grid: {fileID: 0}
+  Owner: {fileID: 114577845650733350}
+  eventLog: {fileID: 0}
+  spawnX: 0
+  spawnY: 0
+  costs: []
 --- !u!114 &114548509528224262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -105,5 +122,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameLabel: {fileID: 0}
+  logColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
   playerMaterial: {fileID: 2100000, guid: caf6a3308fba89546bac41fe1768dba3, type: 2}
-  playerSelection: {fileID: 2100000, guid: 51cfee619baa5c441844caaf4f14231c, type: 2}
+  playerSelection: {fileID: 2100000, guid: 351b8815e25bbaa4ba2fa047fdde6e85, type: 2}
+--- !u!114 &114709364369578894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1441610070458484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c66fb72a2720547988d80f9a7fdd3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Materials:
+  - {fileID: 2100000, guid: c733a47b560c3b044b32d656e7372ec3, type: 2}
+  - {fileID: 2100000, guid: b7114644b69aca14cbaa50c25779ca4e, type: 2}
+  - {fileID: 2100000, guid: c13bbf2281fa50e438d0df39cedc4b6e, type: 2}
+  - {fileID: 2100000, guid: b65ea3e94e312e44a9039c08b7a95466, type: 2}
+  - {fileID: 2100000, guid: b3792f6430fecbe4aad523685dc5f35b, type: 2}
+  - {fileID: 2100000, guid: 6b0470a445c94cc4997a9b5e72c66037, type: 2}
+--- !u!114 &114982349589747906
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1441610070458484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f1a53819f1984f45b68380a67d4c4e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxCars: 4
+  DangerZones: []
+  SpawnChance: 0.5
+  unitFactory: {fileID: 114427916631865980}
+  grid: {fileID: 0}

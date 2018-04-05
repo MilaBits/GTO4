@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4633361187281118}
-  - component: {fileID: 114065961407415742}
   - component: {fileID: 114671154716685962}
   - component: {fileID: 114182950909926894}
   - component: {fileID: 23896079315314986}
@@ -88,25 +87,9 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1940107027634758}
   m_Mesh: {fileID: 4300002, guid: 0346aefb87cdbc34fa046bc7be029be0, type: 3}
---- !u!114 &114065961407415742
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1940107027634758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77e400e429b0357498a8dbdda62f60ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  owner: {fileID: 0}
-  maxHealth: 50
-  Health: 50
-  movementSpeed: 1.5
-  turret: {fileID: 0}
 --- !u!114 &114182950909926894
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1940107027634758}
@@ -118,7 +101,7 @@ MonoBehaviour:
   _guid: 99372d4d-55eb-40c3-b032-4890a95d915b
 --- !u!114 &114671154716685962
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1940107027634758}

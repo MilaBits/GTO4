@@ -2,32 +2,37 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TurnManager : MonoBehaviour {
+    public List<Player> Players;
 
-    public List<Player> players;
+    public UnityEvent StartTurn;
 
-    [SerializeField]
-    private int currentPlayer = 0;
+
+    [SerializeField] private int currentPlayer = 0;
+
+    public int Turn { get; private set; }
 
     // Use this for initialization
     void Start() {
-        foreach (Player player in players.Skip(1)) {
+        Turn = 1;
+        foreach (Player player in Players.Skip(1)) {
             player.gameObject.SetActive(false);
         }
     }
 
     public void NextTurn() {
-
-        players[currentPlayer].gameObject.SetActive(false);
+        Players[currentPlayer].gameObject.SetActive(false);
 
         currentPlayer++;
 
-        if (currentPlayer >= players.Count) {
+        if (currentPlayer >= Players.Count) {
             currentPlayer = 0;
         }
 
-        players[currentPlayer].gameObject.SetActive(true);
+        Players[currentPlayer].gameObject.SetActive(true);
+        Turn++;
+        StartTurn.Invoke();
     }
-
 }

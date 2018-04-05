@@ -1,13 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Selection : MonoBehaviour {
-
     public GridTile previousSelected;
     public GridTile selected;
     public Player player;
     public LayerMask layerMask;
+
+    public EventLog eventLog;
 
     void Awake() {
         player = GetComponentInParent<Player>();
@@ -15,7 +17,6 @@ public class Selection : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
         //LMB
         if (Input.GetButtonDown("Fire1")) {
             GetClickedObject();
@@ -25,21 +26,25 @@ public class Selection : MonoBehaviour {
         if (Input.GetButtonDown("Fire2")) {
             GetClickedObject();
 
-            if (previousSelected.gameObject.GetComponent<GridTile>() && previousSelected.GetComponentInChildren<Unit>()) {
+            if (previousSelected.gameObject.GetComponent<GridTile>() &&
+                previousSelected.GetComponentInChildren<Unit>()) {
                 Unit unit = previousSelected.GetComponentInChildren<Unit>();
 
                 // Check if it's the owner's turn
                 if (unit.owner.gameObject.activeSelf) {
-
                     if (selected.gameObject.GetComponent<GridTile>() && selected.GetComponentInChildren<Unit>()) {
+                        Unit target = selected.GetComponentInChildren<Unit>();
 
                         // Clicked an enemy, attack
-                        unit.turret.Fire(selected.GetComponentInChildren<Unit>());
+                        if (unit.turret.Fired) return;
+                        eventLog.Log(String.Format("{0} fired at {1}", unit.name, target.name), player);
+                        unit.turret.Fire(target);
                     }
                     else {
-
                         // Clicked an empty tile, move
+                        if (unit.Moved) return;
                         unit.Move(selected.transform);
+                        eventLog.Log(String.Format("{0} moved to {1}", unit.name, selected), player);
                     }
                 }
             }

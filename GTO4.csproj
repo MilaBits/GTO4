@@ -45,7 +45,7 @@
   <ItemGroup>
     <Reference Include="mscorlib" />
     <Reference Include="System" />
-    <Reference Include="System.XML" />
+    <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Boo.Lang" />
     <Reference Include="UnityScript.Lang" />
@@ -354,16 +354,19 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\Scripts\CivAI.cs" />
+    <Compile Include="Assets\Scripts\CivCar.cs" />
     <Compile Include="Assets\Scripts\GridTile.cs" />
     <Compile Include="Assets\Scripts\IProxyColliderListener.cs" />
+    <Compile Include="Assets\Scripts\MatList.cs" />
     <Compile Include="Assets\Scripts\Ownable.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\ProxyCollider.cs" />
     <Compile Include="Assets\Scripts\Resource.cs" />
     <Compile Include="Assets\Scripts\ResourceUI.cs" />
+    <Compile Include="Assets\Scripts\ScrollingChainGenerator.cs" />
     <Compile Include="Assets\Scripts\Selection.cs" />
-    <Compile Include="Assets\Scripts\StreetGenerator.cs" />
     <Compile Include="Assets\Scripts\TileGrid.cs" />
     <Compile Include="Assets\Scripts\TurnManager.cs" />
     <Compile Include="Assets\Scripts\Turret.cs" />
@@ -371,7 +374,10 @@
     <Compile Include="Assets\Scripts\UnitFactory.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Plugins\Visual Design Cafe\Assemblies\VisualDesignCafe.Editor.Analytics.xml" />
+    <None Include="Assets\Plugins\Visual Design Cafe\Assemblies\VisualDesignCafe.Editor.xml" />
     <None Include="Assets\Plugins\Visual Design Cafe\Nested Prefabs\NestedPrefabs.Editor.xml" />
+    <None Include="Assets\Plugins\Visual Design Cafe\Nested Prefabs\NestedPrefabs.Package.xml" />
     <None Include="Assets\Plugins\Visual Design Cafe\Nested Prefabs\NestedPrefabs.xml" />
     <None Include="Assets\Plugins\Visual Design Cafe\Nested Prefabs\README.txt" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />

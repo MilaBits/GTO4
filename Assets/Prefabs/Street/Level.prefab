@@ -82,9 +82,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScrollSpeed: 5
-  AvailabeStreetParts: []
+  AvailableParts:
+  - {fileID: 1842265874410624, guid: cd3d130b828f732499265fb751b06400, type: 2}
+  - {fileID: 1112993394028646, guid: c9d7d7fb8399df9448848e60a13bbc2a, type: 2}
+  - {fileID: 1112993394028646, guid: c9d7d7fb8399df9448848e60a13bbc2a, type: 2}
   PartSize: 100
-  MaxCurrentParts: 3
+  UseRandomSize: 0
+  MinSize: 2
+  MaxSize: 20
+  MaxCurrentParts: 2
   GeneratedParts: 0
-  CurrentStreetParts: []
+  CurrentParts: []
   DeleteDistance: 150
+  distance: 0

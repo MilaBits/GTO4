@@ -8,6 +8,7 @@ public class Turret : MonoBehaviour {
     public Projectile projectile;
     public float projectileSpeed;
     public float Damage;
+    public bool Fired;
 
     private Unit unit;
     private Quaternion defaultRotation;
@@ -22,7 +23,7 @@ public class Turret : MonoBehaviour {
     }
 
     public void Fire(Unit target) {
-        
+        Fired = true;
         if (target.owner != unit.owner) {
             turret.transform.LookAt(target.transform);
             turret.transform.Rotate(-90, 0, 0);

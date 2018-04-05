@@ -5,24 +5,25 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class UnitFactory : MonoBehaviour {
-
     public Unit Unit;
     public TileGrid Grid;
     public Player Owner;
 
-    public int spawnX;
+    [Space] public EventLog eventLog;
+
+    [Space] public int spawnX;
     public int spawnY;
 
-    public List<ResourceCost> costs = new List<ResourceCost>();
+    [Space] public List<ResourceCost> costs = new List<ResourceCost>();
+
 
     public void SpawnUnit(GridTile tile) {
         spawnX = tile.x;
         spawnY = tile.y;
         SpawnUnit();
     }
-    
-    public void SpawnUnit() {
 
+    public void SpawnUnit() {
         // Check if there are enough resources
         foreach (ResourceCost resourceCost in costs) {
             if (!resourceCost.HasEnough()) {
@@ -47,14 +48,9 @@ public class UnitFactory : MonoBehaviour {
         // Spawn unit
         Unit unit = Instantiate(Unit, Grid.GetTile(spawnX, spawnY).transform);
         unit.owner = Owner;
-
-
-        // Car specific code to change it's color
-        //Renderer unitRenderer = unit.GetComponentInChildren<MeshRenderer>();
-        //Material[] materials = unitRenderer.materials;
-        //materials[1] = Owner.playerMaterial;
-        //unitRenderer.materials = materials;
-
+        if (!unit.name.Contains("Civ"))
+            eventLog.Log(String.Format("{0} called in reinforcements!", Owner.name), Owner);
+        unit.name = String.Format("{0} {1}", Owner.name, Unit.name);
     }
 
     [Serializable]

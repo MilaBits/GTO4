@@ -1,7 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using Random = UnityEngine.Random;
 
 public class CivAI : MonoBehaviour {
     public int MaxCars;
@@ -12,33 +15,52 @@ public class CivAI : MonoBehaviour {
     public UnitFactory unitFactory;
     public TileGrid grid;
 
-    public void Think() {
+    public TurnManager _turnManager;
+    public EventLog _eventLog;
+    private Player _player;
+    private Selection _selection;
+
+    private void Start() {
+        _player = GetComponent<Player>();
+        _selection = GetComponent<Selection>();
+        _eventLog = GameObject.Find("GameManager").GetComponent<EventLog>();
+        _turnManager = GameObject.Find("GameManager").GetComponent<TurnManager>();
+        _turnManager.StartTurn.AddListener(Think);
+
+        PickNextLocation();
+    }
+
+    private void Think() {
+        SpawnCars();
+
         if (DangerZones.Count < MaxCars) {
             PickNextLocation();
         }
-
-        foreach (GridTile tile in DangerZones) {
-            unitFactory.SpawnUnit(tile);
-        }
-
-        SpawnCars();
     }
 
     public void PickNextLocation() {
-        GridTile newTile = null;
-        while (newTile == null || newTile.transform.childCount > 0) {
-            newTile = grid.GetTile(Random.Range(0, grid.GridWidth), Random.Range(0, grid.GridHeight));
-        }
-
-        DangerZones.Add(newTile);
-        newTile.MarkSelected(true, GetComponent<Player>().playerSelection);
+        GridTile tile = grid.GetRandomTile(true);
+        DangerZones.Add(tile);
+        tile.MarkSelected(true, _player.playerSelection);
     }
 
     public void SpawnCars() {
-        foreach (GridTile dangerZone in DangerZones) {
-            if (Random.Range(0, 1) >= SpawnChance) {
+        int carsEntering = 0;
+
+        for (var i = 0; i < DangerZones.Count; i++) {
+            GridTile dangerZone = DangerZones[i];
+            float chance = Random.Range(0.0f, 1.0f);
+            Debug.Log("Chance: " + chance);
+            if (chance <= SpawnChance) {
+                _selection.selected = dangerZone;
                 unitFactory.SpawnUnit(dangerZone);
+                dangerZone.MarkSelected(false, _player.playerSelection);
+                DangerZones.RemoveAt(i);
+                carsEntering++;
             }
         }
+
+        if (carsEntering > 0)
+            _eventLog.Log(String.Format("{0} civilian(s) enter the field", carsEntering), _player);
     }
 }

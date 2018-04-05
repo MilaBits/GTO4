@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114523621135489940}
   - component: {fileID: 114108504324135902}
   - component: {fileID: 114679525156030196}
+  - component: {fileID: 114596870100871016}
   m_Layer: 0
   m_Name: TileGrid
   m_TagString: Untagged
@@ -69,10 +70,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a171d56dbfbd80641a0eb66217fa778f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridWidth: 5
-  gridHeight: 6
-  spacing: 2.01
-  tile: {fileID: 1587461907545880, guid: c259fa3cf876d9647b32091b57a2fad0, type: 2}
+  GridWidth: 5
+  GridHeight: 6
+  Spacing: 2
+  Tile: {fileID: 114684477020952412, guid: c259fa3cf876d9647b32091b57a2fad0, type: 2}
+--- !u!114 &114596870100871016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1757514660717134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f214b7d094ca249bf376c01e4a8aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Unit: {fileID: 114487521850122056, guid: f5eb23b837a7cb448bbd1c88320c7703, type: 2}
+  Grid: {fileID: 114523621135489940}
+  Owner: {fileID: 0}
+  eventLog: {fileID: 0}
+  spawnX: 0
+  spawnY: 0
+  costs: []
 --- !u!114 &114679525156030196
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
     public Text nameLabel;
+    public Color logColor;
     public Material playerMaterial;
     public Material playerSelection;
 

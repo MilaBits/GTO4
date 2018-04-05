@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Mila\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_GTO4.2130571696.00" t="ExcludeRecursive" />
-    <e p="K:\Documents\Projects\Unity Projects\GTO4" t="IncludeRecursive">
+    <e p="C:\Users\Mila\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_GTO4.-1328834855.00" t="ExcludeRecursive" />
+    <e p="D:\Data\Projects\Unity\GTO4" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -11,6 +11,11 @@
           <e p="MeshCombineWizard.cs" t="Include" />
         </e>
         <e p="Plugins" t="Include">
+          <e p="Editor" t="Include">
+            <e p="JetBrains" t="Include">
+              <e p="Unity3DRider.cs" t="Include" />
+            </e>
+          </e>
           <e p="Visual Design Cafe" t="Include">
             <e p="Nested Prefabs" t="Include">
               <e p="Editor" t="Include">
@@ -187,6 +192,7 @@
         <e p="Scripts" t="Include">
           <e p="CivAI.cs" t="Include" />
           <e p="CivCar.cs" t="Include" />
+          <e p="EventLog.cs" t="Include" />
           <e p="GridTile.cs" t="Include" />
           <e p="IProxyColliderListener.cs" t="Include" />
           <e p="MatList.cs" t="Include" />
@@ -206,9 +212,12 @@
         </e>
       </e>
       <e p="GTO4.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
     </e>
   </component>
 </project>
