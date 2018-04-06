@@ -6,13 +6,14 @@ using UnityEngine;
 public class Projectile : Ownable {
     public float Damage;
     public ParticleSystem particleSystem;
+    public bool damaged;
 
     void Awake() {
         particleSystem = GameObject.Find("GameManager").GetComponent<ParticleSystem>();
     }
 
     void OnCollisionEnter(Collision col) {
-
+        if (damaged) return;
         Debug.Log(col.gameObject.name);
         if (col.gameObject.transform.parent.GetComponent<Unit>() != null) {
             Unit hit = col.gameObject.transform.parent.GetComponent<Unit>();
@@ -26,8 +27,8 @@ public class Projectile : Ownable {
             particleSystem.Emit(emitParams, 50);
             hit.TakeDamage(Damage);
 
-            Destroy(gameObject, 1f);
+            damaged = true;
+            Destroy(gameObject);
         }
-
     }
 }

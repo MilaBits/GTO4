@@ -23,8 +23,6 @@ public class CivAI : MonoBehaviour {
     private void Start() {
         _player = GetComponent<Player>();
         _selection = GetComponent<Selection>();
-        _eventLog = GameObject.Find("GameManager").GetComponent<EventLog>();
-        _turnManager = GameObject.Find("GameManager").GetComponent<TurnManager>();
         _turnManager.StartTurn.AddListener(Think);
 
         PickNextLocation();
@@ -36,12 +34,14 @@ public class CivAI : MonoBehaviour {
         if (DangerZones.Count < MaxCars) {
             PickNextLocation();
         }
+
+        gameObject.SetActive(false);
     }
 
     public void PickNextLocation() {
         GridTile tile = grid.GetRandomTile(true);
         DangerZones.Add(tile);
-        tile.MarkSelected(true, _player.playerSelection);
+        tile.MarkSelected(true, _selection.selectedMaterial);
     }
 
     public void SpawnCars() {
@@ -50,17 +50,18 @@ public class CivAI : MonoBehaviour {
         for (var i = 0; i < DangerZones.Count; i++) {
             GridTile dangerZone = DangerZones[i];
             float chance = Random.Range(0.0f, 1.0f);
-            Debug.Log("Chance: " + chance);
             if (chance <= SpawnChance) {
                 _selection.selected = dangerZone;
                 unitFactory.SpawnUnit(dangerZone);
-                dangerZone.MarkSelected(false, _player.playerSelection);
+                dangerZone.MarkSelected(false, _selection.selectedMaterial);
                 DangerZones.RemoveAt(i);
                 carsEntering++;
             }
         }
 
-        if (carsEntering > 0)
+        if (carsEntering > 0) {
             _eventLog.Log(String.Format("{0} civilian(s) enter the field", carsEntering), _player);
+            PopupController.CreateSlidingPopup("Incoming Civilians", _player.logColor);
+        }
     }
 }

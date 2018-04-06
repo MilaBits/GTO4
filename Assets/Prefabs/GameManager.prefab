@@ -287,9 +287,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxCars: 4
   DangerZones: []
-  SpawnChance: 0.5
+  SpawnChance: 0.4
   unitFactory: {fileID: 114299881471389834}
   grid: {fileID: 0}
+  _turnManager: {fileID: 114801178857069820}
+  _eventLog: {fileID: 114717885111449662}
 --- !u!114 &114659459817546216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -303,11 +305,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousSelected: {fileID: 0}
   selected: {fileID: 0}
+  ActionSelected: {fileID: 0}
   player: {fileID: 114895077633592144}
   layerMask:
     serializedVersion: 2
     m_Bits: 512
   eventLog: {fileID: 114717885111449662}
+  selectedMaterial: {fileID: 0}
+  ActionMaterial: {fileID: 0}
 --- !u!114 &114679671524696108
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -424,6 +429,7 @@ MonoBehaviour:
   Players:
   - {fileID: 0}
   - {fileID: 0}
+  Civ: {fileID: 114895077633592144}
   StartTurn:
     m_PersistentCalls:
       m_Calls: []
@@ -469,9 +475,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameLabel: {fileID: 0}
-  logColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+  logColor: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
   playerMaterial: {fileID: 2100000, guid: caf6a3308fba89546bac41fe1768dba3, type: 2}
-  playerSelection: {fileID: 2100000, guid: c3d7329476cbfff499772dc9054c72bc, type: 2}
+  playerSelection: {fileID: 2100000, guid: 51cfee619baa5c441844caaf4f14231c, type: 2}
 --- !u!114 &114906202489019498
 MonoBehaviour:
   m_ObjectHideFlags: 1

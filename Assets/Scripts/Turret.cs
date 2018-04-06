@@ -7,7 +7,8 @@ public class Turret : MonoBehaviour {
     public GameObject turret;
     public Projectile projectile;
     public float projectileSpeed;
-    public float Damage;
+    public float MinDamage;
+    public float MaxDamage;
     public bool Fired;
 
     private Unit unit;
@@ -28,19 +29,14 @@ public class Turret : MonoBehaviour {
             turret.transform.LookAt(target.transform);
             turret.transform.Rotate(-90, 0, 0);
 
-            Debug.Log("Bang bang bang!");
             StartCoroutine(SendProjectile(turret.transform.position, target.transform, projectileSpeed));
-            turnManager.NextTurn();
-        }
-        else {
-            Debug.Log("Can't fire at your own team!");
         }
     }
 
     IEnumerator SendProjectile(Vector3 startPosition, Transform target, float time) {
         Projectile shot = Instantiate(projectile);
         shot.owner = unit.owner;
-        shot.Damage = Damage;
+        shot.Damage = Random.Range(MinDamage, MaxDamage);
         shot.transform.position = turret.transform.position;
 
         float startTime = Time.time;

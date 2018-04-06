@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 114936143881869104}
   - component: {fileID: 114637903991678774}
   - component: {fileID: 114293518736241782}
+  - component: {fileID: 54925672356254128}
   m_Layer: 0
   m_Name: CivCar
   m_TagString: Untagged
@@ -120,6 +121,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1264933118862278}
   m_Mesh: {fileID: 4300002, guid: 0346aefb87cdbc34fa046bc7be029be0, type: 3}
+--- !u!54 &54925672356254128
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1632179226809138}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!64 &64642784760836284
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -154,7 +170,7 @@ Animator:
   m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114293518736241782
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1632179226809138}
@@ -166,7 +182,7 @@ MonoBehaviour:
   _guid: b1161dca-14ed-4d92-b499-195c17c8f594
 --- !u!114 &114637903991678774
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1632179226809138}
@@ -193,16 +209,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  maxHealth: 50
-  Health: 50
+  maxHealth: 30
+  Health: 30
   movementSpeed: 1.5
-  timedDeath: 0
+  TimedDeath: 1
   lifeTime: 2
   Moved: 0
+  Bumped: 0
   turret: {fileID: 0}
 --- !u!114 &114980714726318344
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 11
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1264933118862278}

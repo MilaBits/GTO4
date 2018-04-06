@@ -22,6 +22,7 @@ public class Unit : Ownable {
     private Animator _animator;
 
     public bool Moved;
+    public bool Bumped;
 
     [HideInInspector] public Turret turret;
 
@@ -30,8 +31,10 @@ public class Unit : Ownable {
             turret = GetComponent<Turret>();
 
         _particleSystem = GameObject.Find("GameManager").GetComponent<ParticleSystem>();
-        _turnManager = GameObject.Find("GameManager").GetComponent<TurnManager>();
+        _turnManager = _particleSystem.GetComponent<TurnManager>();
         _animator = GetComponentInChildren<Animator>();
+
+        _animator.speed = _animator.speed * Random.Range(1.0f, 2.0f);
 
         if (owner == null)
             owner = GameObject.Find("Civ").GetComponent<Player>();
@@ -39,44 +42,48 @@ public class Unit : Ownable {
         FixTeam();
         _turnManager.StartTurn.AddListener(TurnPreparation);
 
-        if (_turnManager.Players.FirstOrDefault(p => p.name == owner.name) == null) {
-            TimedDeath = true;
-            Debug.Log("AI Car Spawned");
+        if (TimedDeath) {
+            Debug.Log("Neutral Car Spawned");
         }
     }
 
     private void TurnPreparation() {
         if (TimedDeath)
-            if (lifeTime-- == 0) {
+            if (lifeTime <= 1) {
                 Leave();
                 return;
             }
 
+        lifeTime--;
+
+        Bumped = false;
         Moved = false;
         if (turret != null)
             turret.Fired = false;
     }
 
-
-    private void Leave() {
+    public void Leave() {
         _animator.SetTrigger("Leave");
         Destroy(gameObject, 2f);
     }
-    
+
     public void TakeDamage(float damage) {
+        Debug.Log("Damage Taken");
         if (Health > damage) {
             Health -= damage;
         }
         else {
             Die();
         }
+
+        PopupController.CreatePopup(Mathf.RoundToInt(damage).ToString(), transform);
     }
 
     private void Die() {
         ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams();
         emitParams.position = gameObject.transform.position;
         emitParams.startSize = 15;
-        _particleSystem.Emit(emitParams, 50);
+        _particleSystem.Emit(emitParams, 100);
         //TODO: Maybe a fade out effect
         _animator.SetTrigger("Crash");
         Destroy(gameObject, 5f);
@@ -114,10 +121,18 @@ public class Unit : Ownable {
 
     private void OnCollisionEnter(Collision other) {
         if (other.transform.GetComponentInParent<Unit>()) {
+            Bumped = true;
+            if (other.transform.parent.GetComponent<Unit>()) {
+                Unit unit = other.transform.parent.GetComponent<Unit>();
+                unit.TakeDamage(20);
+                Leave();
+            }
+
             ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams();
-            emitParams.position = other.contacts.First().point;
-            emitParams.startSize = .5f;
-            _particleSystem.Emit(emitParams, 50);
+            Vector3 pos = gameObject.transform.position;
+            emitParams.position = pos;
+            emitParams.startSize = 10;
+            _particleSystem.Emit(emitParams, 100);
         }
     }
 }

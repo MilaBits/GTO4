@@ -83,7 +83,7 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1834357272810542}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -185,7 +185,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x: 0
   y: 0
-  selectedMaterial: {fileID: 2100000, guid: 351b8815e25bbaa4ba2fa047fdde6e85, type: 2}
 --- !u!114 &114968156132952594
 MonoBehaviour:
   m_ObjectHideFlags: 11

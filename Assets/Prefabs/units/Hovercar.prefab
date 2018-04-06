@@ -408,7 +408,7 @@ MonoBehaviour:
   movementSpeed: 1.5
   TimedDeath: 0
   lifeTime: 2
-  Moved: 0
+  Moved: 1
   turret: {fileID: 0}
 --- !u!114 &114570249959979468
 MonoBehaviour:
@@ -490,5 +490,6 @@ MonoBehaviour:
   projectile: {fileID: 114539535911716908, guid: b772762635578ee4c96b284dc47c5497,
     type: 2}
   projectileSpeed: 1
-  Damage: 35
-  Fired: 0
+  MinDamage: 25
+  MaxDamage: 35
+  Fired: 1
