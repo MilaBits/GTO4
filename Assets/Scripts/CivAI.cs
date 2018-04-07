@@ -26,15 +26,16 @@ public class CivAI : MonoBehaviour {
         _turnManager.StartTurn.AddListener(Think);
 
         PickNextLocation();
+        gameObject.SetActive(false);
     }
 
     private void Think() {
+        Debug.Log("Thinking..");
         SpawnCars();
 
         if (DangerZones.Count < MaxCars) {
             PickNextLocation();
         }
-
         gameObject.SetActive(false);
     }
 

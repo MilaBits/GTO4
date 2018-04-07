@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class TurnManager : MonoBehaviour {
     public List<Player> Players;
@@ -25,7 +26,6 @@ public class TurnManager : MonoBehaviour {
     }
 
     public void NextTurn() {
-        
         Players[currentPlayer].gameObject.SetActive(false);
 
         currentPlayer++;
@@ -40,5 +40,13 @@ public class TurnManager : MonoBehaviour {
         Civ.gameObject.SetActive(true);
         StartTurn.Invoke();
         PopupController.CreateSlidingPopup(String.Format("{0} Turn", Players[currentPlayer].name),Players[currentPlayer].logColor);
+    }
+
+    public void RestartGame() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void ExitGame() {
+        Application.Quit();
     }
 }

@@ -21,6 +21,10 @@ public class Selection : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (Input.GetKeyUp(KeyCode.Escape)) {
+            Application.Quit();
+        }
+        
         if (Input.GetButtonDown("Fire1") && GetClickedObject()) { //LMB
             if (selected != null)
                 selected.MarkSelected(false, selectedMaterial);
@@ -44,11 +48,16 @@ public class Selection : MonoBehaviour {
 
                         // Clicked an enemy, attack
                         if (unit.turret.Fired) {
-                            eventLog.Log(String.Format("{0} already fired or just entered", target.name));
+                            eventLog.Log(String.Format("{0} already fired or just entered", unit.name));
                             return;
                         }
 
-                        eventLog.Log(String.Format("{0} fired at {1}", target.name, target.name), player);
+                        if (unit.owner == target.owner) {
+                            eventLog.Log("No friendly fire!");
+                            return;
+                        }
+
+                        eventLog.Log(String.Format("{0} fired at {1}", unit.name, target.name), player);
                         unit.turret.Fire(target);
                     }
                     else {

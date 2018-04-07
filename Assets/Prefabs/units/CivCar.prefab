@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 95716028042488788}
   - component: {fileID: 114980714726318344}
   - component: {fileID: 64642784760836284}
+  - component: {fileID: 54190553380393630}
   m_Layer: 0
   m_Name: CivHovercar
   m_TagString: Untagged
@@ -42,7 +43,6 @@ GameObject:
   - component: {fileID: 114936143881869104}
   - component: {fileID: 114637903991678774}
   - component: {fileID: 114293518736241782}
-  - component: {fileID: 54925672356254128}
   m_Layer: 0
   m_Name: CivCar
   m_TagString: Untagged
@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1632179226809138}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4950452688053544}
@@ -121,12 +121,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1264933118862278}
   m_Mesh: {fileID: 4300002, guid: 0346aefb87cdbc34fa046bc7be029be0, type: 3}
---- !u!54 &54925672356254128
+--- !u!54 &54190553380393630
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1632179226809138}
+  m_GameObject: {fileID: 1264933118862278}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -216,6 +216,7 @@ MonoBehaviour:
   lifeTime: 2
   Moved: 0
   Bumped: 0
+  dying: 0
   turret: {fileID: 0}
 --- !u!114 &114980714726318344
 MonoBehaviour:

@@ -13,7 +13,8 @@ public class Projectile : Ownable {
     }
 
     void OnCollisionEnter(Collision col) {
-        if (damaged) return;
+        if (damaged) return; //Make sure it hits only once
+
         Debug.Log(col.gameObject.name);
         if (col.gameObject.transform.parent.GetComponent<Unit>() != null) {
             Unit hit = col.gameObject.transform.parent.GetComponent<Unit>();

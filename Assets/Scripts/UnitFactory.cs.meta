@@ -6,7 +6,7 @@ MonoImporter:
   defaultReferences:
   - Unit: {fileID: 1685898408009974, guid: cc644d82bc733c1408bee964f66ad378, type: 2}
   - Grid: {instanceID: 0}
-  executionOrder: 0
+  executionOrder: 300
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 

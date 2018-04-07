@@ -23,6 +23,7 @@ public class Unit : Ownable {
 
     public bool Moved;
     public bool Bumped;
+    public bool dying;
 
     [HideInInspector] public Turret turret;
 
@@ -41,10 +42,6 @@ public class Unit : Ownable {
 
         FixTeam();
         _turnManager.StartTurn.AddListener(TurnPreparation);
-
-        if (TimedDeath) {
-            Debug.Log("Neutral Car Spawned");
-        }
     }
 
     private void TurnPreparation() {
@@ -73,19 +70,23 @@ public class Unit : Ownable {
             Health -= damage;
         }
         else {
-            Die();
+            if (!dying)
+                Die();
         }
 
         PopupController.CreatePopup(Mathf.RoundToInt(damage).ToString(), transform);
     }
 
     private void Die() {
+        dying = true;
         ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams();
         emitParams.position = gameObject.transform.position;
         emitParams.startSize = 15;
         _particleSystem.Emit(emitParams, 100);
         //TODO: Maybe a fade out effect
         _animator.SetTrigger("Crash");
+        owner.UnitsLost++;
+        owner.CheckLoss();
         Destroy(gameObject, 5f);
     }
 
